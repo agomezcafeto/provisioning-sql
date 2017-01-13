@@ -1,6 +1,4 @@
 
-CREATE SCHEMA "${schema.name}";
-
 CREATE TABLE service_type (
   id serial NOT NULL,
   description text,
