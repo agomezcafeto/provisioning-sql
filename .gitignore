@@ -1,0 +1,8 @@
+build/
+.idea/
+.gradle/
+*.iml
+sonarReport.html
+doc/
+liquibase.properties
+postgresql.jar
