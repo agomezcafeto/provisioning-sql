@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+          id: Create tenant schema
+          author: agomez
+          changes:
+              - sql:
+                  sql: create schema ${schema.name}
+  - changeSet:
+            id: Set default schema
+            author: agomez
+            comment: This change set is always executed.
+            runAlways: true
+            changes:
+                - sql:
+                    sql: set search_path = ${schema.name}
+
+  - include:
+      file: COS/structure/COS_init.sql
+
+  - include:
+      file: COS/data/COS_0.1.0_data.sql
+
+  - include:
+      file: CTAS/structure/CTAS_init.sql
