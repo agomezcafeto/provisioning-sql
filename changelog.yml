@@ -15,10 +15,10 @@ databaseChangeLog:
                     sql: set search_path = ${schema.name}
 
   - include:
-      file: COS/structure/COS_init.sql
+      file: ./COS/structure/COS_init.sql
 
   - include:
-      file: COS/data/COS_0.1.0_data.sql
+      file: ./COS/data/COS_0.1.0_data.sql
 
   - include:
-      file: CTAS/structure/CTAS_init.sql
+      file: ./CTAS/structure/CTAS_init.sql
