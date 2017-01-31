@@ -563,6 +563,9 @@ CREATE TABLE service_type (
   CONSTRAINT service_type_pk PRIMARY KEY (id)
 );
 
+INSERT INTO service_type (description, created_by, created_at) VALUES ('Proceso de selección completo', 'default', '2016-01-31');
+INSERT INTO service_type (description, created_by, created_at) VALUES ('Evaluación psicotécnica', 'default', '2016-01-31');
+
 CREATE TABLE other_benefits (
   id serial NOT NULL,
   name character varying(255) NOT NULL,
@@ -572,6 +575,9 @@ CREATE TABLE other_benefits (
   modified_at date,
   CONSTRAINT other_benefits_pk PRIMARY KEY (id)
 );
+
+INSERT INTO other_benefits (name, created_by, created_at) VALUES ('Clases de Inglés', 'default', '2016-01-31');
+INSERT INTO other_benefits (name, created_by, created_at) VALUES ('Bono Navideño', 'default', '2016-01-31');
 
 CREATE TABLE requisition (
   id serial NOT NULL,
