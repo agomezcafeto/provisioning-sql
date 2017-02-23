@@ -64,3 +64,33 @@ CREATE TABLE requisition_other_benefits (
       REFERENCES requisition (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE CASCADE
 );
+
+CREATE TABLE job_vacancy
+(
+  id serial NOT NULL,
+  requisition integer,
+  title text,
+  profile_name character varying,
+  invitation text,
+  occupation character varying,
+  experience character varying,
+  skills text,
+  technical_skills text,
+  salary character varying,
+  schedule character varying,
+  contract_type character varying,
+  benefits text,
+  additional_information text,
+  contact_information text,
+  image text,
+  created_at date NOT NULL,
+  created_by character varying,
+  updated_at date,
+  updated_by character varying,
+  public_id character varying(256),
+  status integer NOT NULL,
+  CONSTRAINT job_vacancy_pk PRIMARY KEY (id),
+  CONSTRAINT job_vacancy_requisition_fk FOREIGN KEY (requisition)
+      REFERENCES requisition (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE CASCADE
+);

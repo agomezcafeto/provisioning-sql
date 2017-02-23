@@ -20,8 +20,12 @@ databaseChangeLog:
 
   - include:
       relativeToChangelogFile: true
-      file: COS/data/COS_0.1.0_data.sql
+      file: COS/data/COS_init_data.sql
 
   - include:
       relativeToChangelogFile: true
       file: CTAS/structure/CTAS_init.sql
+
+  - include:
+      relativeToChangelogFile: true
+      file: CTAS/structure/CTAS_init_data.sql
