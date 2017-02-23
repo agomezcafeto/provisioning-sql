@@ -28,4 +28,4 @@ databaseChangeLog:
 
   - include:
       relativeToChangelogFile: true
-      file: CTAS/structure/CTAS_init_data.sql
+      file: CTAS/data/CTAS_init_data.sql
