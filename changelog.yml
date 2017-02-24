@@ -57,11 +57,4 @@ databaseChangeLog:
                     relativeToChangelogFile: true
                     stripComments: true
 
-  - changeSet:
-            id: v4-${schema.name}
-            author: liquibase-docs
-            changes:
-                - sqlFile:
-                    path: COS/structure/test.sql
-                    relativeToChangelogFile: true
-                    stripComments: true
+
