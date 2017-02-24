@@ -11,9 +11,9 @@ databaseChangeLog:
             author: agomez
             comment: This change set is always executed.
             runOnChange: true
-                changes:
-                    - sql:
-                        sql: set search_path = ${schema.name};
+            changes:
+                - sql:
+                    sql: set search_path = ${schema.name};
 
   - include:
       relativeToChangelogFile: true
