@@ -2,7 +2,8 @@ databaseChangeLog:
   - changeSet:
           id: Create tenant schema
           author: agomez
-          runOnChange: true
+          validCheckSum:
+              - ANY
           changes:
               - sql:
                   sql: create schema ${schema.name}
@@ -18,25 +19,49 @@ databaseChangeLog:
                     sql: set search_path = ${schema.name}
 
   - changeSet:
-            id: sqlFile-${schema.name}
+            id: v0-${schema.name}
             author: liquibase-docs
             changes:
                 - sqlFile:
                     path: COS/structure/COS_init_worker.sql
                     relativeToChangelogFile: true
                     stripComments: true
-
+  - changeSet:
+            id: v1-${schema.name}
+            validCheckSum:
+                          - ANY
+            author: liquibase-docs
+            changes:
                 - sqlFile:
                     path: COS/data/COS_init_data_worker.sql
                     relativeToChangelogFile: true
                     stripComments: true
 
+  - changeSet:
+            id: v2-${schema.name}
+            validCheckSum:
+                          - ANY
+            author: liquibase-docs
+            changes:
                 - sqlFile:
                     path: CTAS/structure/CTAS_init_worker.sql
                     relativeToChangelogFile: true
                     stripComments: true
 
+  - changeSet:
+            id: v3-${schema.name}
+            author: liquibase-docs
+            changes:
                 - sqlFile:
                     path: CTAS/data/CTAS_init_data_worker.sql
+                    relativeToChangelogFile: true
+                    stripComments: true
+
+  - changeSet:
+            id: v4-${schema.name}
+            author: liquibase-docs
+            changes:
+                - sqlFile:
+                    path: COS/structure/test.sql
                     relativeToChangelogFile: true
                     stripComments: true
