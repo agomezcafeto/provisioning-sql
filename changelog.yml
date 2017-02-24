@@ -9,6 +9,9 @@ databaseChangeLog:
   - changeSet:
             id: Set default schema
             author: agomez
+            runAlways: true
+            validCheckSum:
+                - ANY
             comment: This change set is always executed.
             changes:
                 - sql:
@@ -22,7 +25,6 @@ databaseChangeLog:
                 - ANY
             changes:
                 - sqlFile:
-                    dbms: PostgreSQL
-                    encoding: utf8
                     path: COS/structure/COS_init_worker.sql
                     relativeToChangelogFile: true
+                    stripComments: true
