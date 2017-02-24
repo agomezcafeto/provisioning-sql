@@ -1,14 +1,14 @@
 databaseChangeLog:
   - changeSet:
           id: Create tenant schema
-          author: agomez
+          author: Andres Gomez
           runOnChange: true
           changes:
               - sql:
                   sql: create schema if not exists ${schema.name}
   - changeSet:
             id: Set default schema
-            author: agomez
+            author: Andres Gomez
             runAlways: true
             validCheckSum:
                 - ANY
@@ -19,6 +19,7 @@ databaseChangeLog:
 
   - changeSet:
             id: cs-1
+            author: Andres Gomez
             changes:
                 - sqlFile:
                     path: COS/structure/COS_init_worker.sql
@@ -26,6 +27,7 @@ databaseChangeLog:
                     stripComments: true
   - changeSet:
             id: cs-2
+            author: Andres Gomez
             changes:
                 - sqlFile:
                     path: COS/data/COS_init_data_worker.sql
@@ -34,6 +36,7 @@ databaseChangeLog:
 
   - changeSet:
             id: cs-3
+            author: Andres Gomez
             changes:
                 - sqlFile:
                     path: CTAS/structure/CTAS_init_worker.sql
@@ -42,6 +45,7 @@ databaseChangeLog:
 
   - changeSet:
             id: cs-4
+            author: Andres Gomez
             changes:
                 - sqlFile:
                     path: CTAS/data/CTAS_init_data_worker.sql
