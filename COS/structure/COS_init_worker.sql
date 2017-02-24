@@ -9,8 +9,6 @@
 --
 
 
-set search_path = hola;
-
 CREATE TABLE behavior (
     behavior_id serial,
     behavior_description text NOT NULL,
