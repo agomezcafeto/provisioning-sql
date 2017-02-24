@@ -14,15 +14,15 @@ databaseChangeLog:
                 - sql:
                     sql: set search_path = ${schema.name}
 
-  changeSet:
-    id: sqlFile-example
-    author: liquibase-docs
-    runAlways: true
-    validCheckSum:
-        - ANY
-    changes:
-    - sqlFile:
-        dbms: PostgreSQL
-        encoding: utf8
-        path: COS/structure/COS_init_worker.sql
-        relativeToChangelogFile: true
+  - changeSet:
+            id: sqlFile-example
+            author: liquibase-docs
+            runAlways: true
+            validCheckSum:
+                - ANY
+            changes:
+                - sqlFile:
+                    dbms: PostgreSQL
+                    encoding: utf8
+                    path: COS/structure/COS_init_worker.sql
+                    relativeToChangelogFile: true
