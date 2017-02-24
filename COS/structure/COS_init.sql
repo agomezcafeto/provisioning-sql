@@ -10,7 +10,7 @@
 
 
 CREATE TABLE behavior (
-    behavior_id integer DEFAULT nextval('behavior_id_seq'::regclass) NOT NULL,
+    behavior_id serial,
     behavior_description text NOT NULL,
     skill integer,
     behavior_type integer NOT NULL
