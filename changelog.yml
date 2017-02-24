@@ -2,8 +2,7 @@ databaseChangeLog:
   - changeSet:
           id: Create tenant schema
           author: agomez
-          validCheckSum:
-              - ANY
+          runOnChange: true
           changes:
               - sql:
                   sql: create schema ${schema.name}
