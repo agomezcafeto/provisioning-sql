@@ -18,12 +18,14 @@ databaseChangeLog:
                     sql: set search_path = ${schema.name}
 
   - changeSet:
+            id: cs-1
             changes:
                 - sqlFile:
                     path: COS/structure/COS_init_worker.sql
                     relativeToChangelogFile: true
                     stripComments: true
   - changeSet:
+            id: cs-2
             changes:
                 - sqlFile:
                     path: COS/data/COS_init_data_worker.sql
@@ -31,6 +33,7 @@ databaseChangeLog:
                     stripComments: true
 
   - changeSet:
+            id: cs-3
             changes:
                 - sqlFile:
                     path: CTAS/structure/CTAS_init_worker.sql
@@ -38,6 +41,7 @@ databaseChangeLog:
                     stripComments: true
 
   - changeSet:
+            id: cs-4
             changes:
                 - sqlFile:
                     path: CTAS/data/CTAS_init_data_worker.sql
