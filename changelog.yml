@@ -10,7 +10,8 @@ databaseChangeLog:
             id: Set default schema
             author: agomez
             comment: This change set is always executed.
-            validCheckSum: 7:4ec3ed1350784741d6cea0b3272cf623
+            validCheckSum:
+                - 7:4ec3ed1350784741d6cea0b3272cf623
             runAlways: true
             changes:
                 - sql:
