@@ -11,7 +11,7 @@ databaseChangeLog:
             author: agomez
             comment: This change set is always executed.
             validCheckSum:
-                - 7:4ec3ed1350784741d6cea0b3272cf623
+                - 7:e25f777d236def994dccf25fbe9f85c9
             runAlways: true
             changes:
                 - sql:
