@@ -17,16 +17,16 @@ databaseChangeLog:
 
   - include:
       relativeToChangelogFile: true
-      file: COS/structure/COS_init.sql
+      file: COS/structure/COS_init_worker.sql
 
   - include:
       relativeToChangelogFile: true
-      file: COS/data/COS_init_data.sql
+      file: COS/data/COS_init_data_worker.sql
 
   - include:
       relativeToChangelogFile: true
-      file: CTAS/structure/CTAS_init.sql
+      file: CTAS/structure/CTAS_init_worker.sql
 
   - include:
       relativeToChangelogFile: true
-      file: CTAS/data/CTAS_init_data.sql
+      file: CTAS/data/CTAS_init_data_worker.sql
