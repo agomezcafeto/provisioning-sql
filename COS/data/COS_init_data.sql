@@ -26,10 +26,10 @@ INSERT INTO field_type (field_type_id, name) VALUES (3, 'email');
 INSERT INTO field_type (field_type_id, name) VALUES (4, 'select');
 INSERT INTO field_type (field_type_id, name) VALUES (1, 'alphabetic');
 
-INSERT INTO field_type_constraint (field_type_constraint_id, field_type_id, constraint_id) VALUES (1, 1, 1);
-
-INSERT INTO field_type_pattern (field_type_pattern_id, field_type_id, pattern_id) VALUES (2, 3, 1);
-
 INSERT INTO form_type (form_type_id, form_type_name, form_type_description) VALUES (1, 'Seleccion', 'Datos adicionales para seleccion');
 
 INSERT INTO pattern (pattern_id, name, expression, error_message) VALUES (1, 'emailPattern', '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)', 'EMAIL_ERROR_MESSAGE');
+
+INSERT INTO field_type_constraint (field_type_constraint_id, field_type_id, constraint_id) VALUES (1, 1, 1);
+
+INSERT INTO field_type_pattern (field_type_pattern_id, field_type_id, pattern_id) VALUES (2, 3, 1);
