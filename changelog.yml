@@ -1,13 +1,15 @@
 databaseChangeLog:
   - changeSet:
-          id: Create tenant schema
+          id: Create tenant schema ${schema.name}
           author: Andres Gomez
-          runOnChange: true
+          runAlways: true
+          validCheckSum:
+              - ANY
           changes:
               - sql:
                   sql: create schema if not exists ${schema.name}
   - changeSet:
-            id: Set default schema
+            id: Set default schema ${schema.name}
             author: Andres Gomez
             runAlways: true
             validCheckSum:
@@ -18,38 +20,40 @@ databaseChangeLog:
                     sql: set search_path = ${schema.name}
 
   - changeSet:
-            id: cs-1
+            id: cs-1 ${schema.name}
             author: Andres Gomez
             changes:
                 - sqlFile:
                     path: COS/structure/COS_init_worker.sql
                     relativeToChangelogFile: true
-                    stripComments: true
   - changeSet:
-            id: cs-2
+            id: cs-2 ${schema.name}
             author: Andres Gomez
             changes:
                 - sqlFile:
                     path: COS/data/COS_init_data_worker.sql
                     relativeToChangelogFile: true
-                    stripComments: true
 
   - changeSet:
-            id: cs-3
+            id: cs-3 ${schema.name}
             author: Andres Gomez
             changes:
                 - sqlFile:
                     path: CTAS/structure/CTAS_init_worker.sql
                     relativeToChangelogFile: true
-                    stripComments: true
 
   - changeSet:
-            id: cs-4
+            id: cs-4 ${schema.name}
             author: Andres Gomez
             changes:
                 - sqlFile:
                     path: CTAS/data/CTAS_init_data_worker.sql
                     relativeToChangelogFile: true
-                    stripComments: true
 
-
+  - changeSet:
+            id: cs-5 ${schema.name}
+            author: Andres Gomez
+            changes:
+                - sqlFile:
+                    path: CTAS/structure/CTAS_0.1.0_worker.sql
+                    relativeToChangelogFile: true
